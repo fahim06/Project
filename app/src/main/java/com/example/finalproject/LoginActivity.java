@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText email, password;
+    EditText txtemail, txtpassword;
     Button login;
     private FirebaseAuth mAuth;
 
@@ -25,27 +25,35 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        email = findViewById(R.id.emailID);
-        password = findViewById(R.id.passwordID);
-        login = findViewById(R.id.loginButtonID);
+        txtemail = (EditText) findViewById(R.id.email);
+        txtpassword = (EditText) findViewById(R.id.password);
+        login = (Button) findViewById(R.id.btnlogin);
 
         mAuth = FirebaseAuth.getInstance();
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = LoginActivity.this.email.getText().toString().trim();
-                String password = LoginActivity.this.password.getText().toString().trim();
+                String email = txtemail.getText().toString().trim();
+                String password = txtpassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
 
                     Toast.makeText(LoginActivity.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
                     return;
+
                 }
                 if (TextUtils.isEmpty(password)) {
 
                     Toast.makeText(LoginActivity.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
                     return;
+
+                }
+
+                if (password.length() < 6) {
+
+                    Toast.makeText(LoginActivity.this, "Password too short", Toast.LENGTH_SHORT).show();
+
                 }
 
                 if (password.equals(password)) {
@@ -61,7 +69,6 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, "error", Toast.LENGTH_SHORT).show();
 
                                     }
-
                                 }
                             });
                 }
@@ -69,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void signup_Button(View view) {
+    public void btn_signup(View view) {
         startActivity(new Intent(getApplicationContext(), SignupActivity.class));
     }
 }

@@ -6,35 +6,34 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="50dp"
+    android:padding="40dp"
     tools:context=".SignupActivity">
 
-
     <EditText
-        android:id="@+id/emailID"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="Email"
         android:inputType="text"
         android:textSize="15sp"
         tools:ignore="TextFields" />
 
     <EditText
-        android:id="@+id/passwordID"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/confirmPasswordID"
+        android:id="@+id/cpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/confirm_password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textSize="15sp" />
 
@@ -42,8 +41,7 @@
         android:id="@+id/signup"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="@string/signup"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/signup1" />
+        android:text="Sign UP"
+        app:backgroundTint="#4CAF50" />
 
 </LinearLayout>

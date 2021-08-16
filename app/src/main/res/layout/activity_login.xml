@@ -9,45 +9,44 @@
     android:padding="40dp"
     tools:context=".LoginActivity">
 
-
     <EditText
-        android:id="@+id/emailID"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="Email"
         android:inputType="text"
         android:textSize="15sp"
         tools:ignore="TextFields" />
 
     <EditText
-        android:id="@+id/passwordID"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:textSize="15sp" />
 
     <Button
-        android:id="@+id/loginButtonID"
+        android:id="@+id/btnlogin"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="5sp"
         android:layout_marginEnd="32dp"
-        android:text="@string/login"
-        app:backgroundTint="@color/login" />
+        android:text="Login"
+        android:textColor="@color/black"
+        app:backgroundTint="#03A9F4" />
 
     <Button
-        android:id="@+id/signupButtonID"
+        android:id="@+id/signup"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="5sp"
         android:layout_marginEnd="32dp"
-        android:onClick="signup_Button"
-        android:text="@string/signup"
-        app:backgroundTint="@color/black" />
-
+        android:onClick="btn_signup"
+        android:text="Sign UP"
+        app:backgroundTint="#4F2B8F" />
 </LinearLayout>
